@@ -3,8 +3,12 @@
     width: auto;
 }
 
+// Background Class 
 .gradient_bg {
     background: var(--gradient-background);
+}
+.gray_bg{
+    background: var(--gray-background);
 }
 
 
@@ -66,5 +70,78 @@ blockquote {
         line-height: 1;
         font-weight: 600;
         color: var(--white-color);
+    }
+}
+
+// Button 
+
+.ar_primary_btn {
+    font-size: 16px;
+    line-height: 52px;
+    font-weight: 400;
+    color: var(--primary-color);
+    background: rgba(251, 66, 117, 0.1);
+    text-transform: uppercase;
+    position: relative;
+
+    & span {
+        position: relative;
+        display: inline-block;
+        font-size: inherit;
+        padding: 0 30px;
+    }
+
+    &:before,
+    &:after,
+    & span:before,
+    & span:after {
+        content: "";
+        position: absolute;
+        transition-duration: 0.4s;
+        background: var(--btn-hover-border);
+    }
+
+    &::after,
+    &::before {
+        width: 0;
+        height: 2px;
+    }
+
+    &:before {
+        left: 50%;
+        top: 0;
+    }
+
+    &:after {
+        left: 50%;
+        bottom: 0;
+    }
+
+    & span:before,
+    & span:after {
+        width: 2px;
+        height: 0;
+    }
+
+    & span:before {
+        top: 50%;
+        right: 0;
+    }
+
+    & span:after {
+        top: 50%;
+        left: 0;
+    }
+
+    &:hover:before,
+    &:hover:after {
+        width: 100%;
+        left: 0;
+    }
+
+    &:hover span:before,
+    &:hover span:after {
+        height: 100%;
+        top: 0;
     }
 }

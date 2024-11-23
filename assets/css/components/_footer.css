@@ -1,0 +1,8 @@
+.ar_footer_sec {
+  position: relative; }
+
+.widget_title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: var(--secondary-font); }
