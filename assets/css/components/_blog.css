@@ -1,0 +1,6 @@
+.ar_blog_item {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: var(--gray-box-shadow);
+  box-shadow: var(--gray-box-shadow);
+  background: var(--white-background); }

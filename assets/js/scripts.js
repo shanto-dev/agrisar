@@ -68,42 +68,6 @@
 //     });
 // });
 
-// /*==================================
-// * Banner Carousel
-// ==================================*/
-// var zcFeedbackSlide = new Swiper(".zc_feedback_slider", {
-//     loop: true,
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     navigation: {
-//         nextEl: ".feedback-button-next",
-//         prevEl: ".feedback-button-prev",
-//     },
-//     autoplay: {
-//         delay: 3100,
-//         disableOnInteraction: false,
-//     },
-//     breakpoints: {
-//         480: {
-//             slidesPerView: 1,
-//             spaceBetween: 15
-//         },
-//         576: {
-//             slidesPerView: 1,
-//             spaceBetween: 20
-//         },
-//         768: {
-//             slidesPerView: 1,
-//             spaceBetween: 20
-//         },
-//         992: {
-//             slidesPerView: 2,
-//             spaceBetween: 24
-//         },
-//     }
-// });
-
 (function ($) {
     'use strict';
 
@@ -138,5 +102,39 @@
             }
         });
     });
-    
+
+
+    /*==================================
+    * Blog Carousel
+    ==================================*/
+    var blogSlider = new Swiper(".ar_blog_slider", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3100,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 24
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+        }
+    });
+
+
 })(jQuery);

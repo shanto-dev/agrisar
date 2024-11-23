@@ -1,0 +1,20 @@
+.ar_team_item {
+  position: relative; }
+  .ar_team_item__thumb {
+    position: relative; }
+    .ar_team_item__thumb img {
+      width: 100%; }
+  .ar_team_item__cnt {
+    background: var(--white-background);
+    border-radius: 10px 10px 0 0;
+    -webkit-box-shadow: var(--gray-box-shadow);
+    box-shadow: var(--gray-box-shadow); }
+    .ar_team_item__cnt h3 {
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 600;
+      color: var(--secondary-color); }
+    .ar_team_item__cnt p {
+      font-size: 16px;
+      line-height: 1.625;
+      color: var(--secondary-color); }
