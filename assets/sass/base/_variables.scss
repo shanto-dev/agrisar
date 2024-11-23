@@ -1,0 +1,72 @@
+// Fonts All
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli-Italic.woff2') format('woff2'),
+        url('./fonts/Muli-Italic.woff') format('woff'),
+        url('./fonts/Muli-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli-Light.woff2') format('woff2'),
+        url('./fonts/Muli-Light.woff') format('woff'),
+        url('./fonts/Muli-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli-LightItalic.woff2') format('woff2'),
+        url('./fonts/Muli-LightItalic.woff') format('woff'),
+        url('./fonts/Muli-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli.woff2') format('woff2'),
+        url('./fonts/Muli.woff') format('woff'),
+        url('./fonts/Muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+// Root All Variable 
+:root {
+
+    --body-font: "Roboto", sans-serif;
+    --secondary-font: "Rubik", sans-serif;
+    --secondary-font2: "Muli", sans-serif;
+    --heading-font: "Roboto", sans-serif;
+
+    --primary-color: #fb4275;
+    --secondary-color: #6EC1E4;
+    --heading-color: #3f3f3f;
+    --body-color: #818181;
+    --acent-color: #fb4275;
+    --border-color: #e0e0e0;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --primary-box-shadow: 0 4px 40px rgba(251, 67, 116, 0.4);
+    --gray-box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
+
+    --white-background: #FFFFFF;
+    --black-background: #000000;
+    --gradient-background: linear-gradient(45deg, #0C467B 0%, #0EA99E 100%);
+
+    
+    --transition-base: 0.3s;
+}

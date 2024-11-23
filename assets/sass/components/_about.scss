@@ -1,0 +1,43 @@
+// About Item 
+.ar_about_section {
+
+    & .col-sm-6:nth-last-child(1),
+    & .col-sm-6:nth-last-child(2) {
+        & .ar_about_item {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.ar_about_item {
+    position: relative;
+    margin-bottom: 47px;
+
+    &__thumb {
+        position: relative;
+        margin-bottom: 13px;
+
+        & img {
+            max-width: 100%;
+            width: auto;
+        }
+    }
+
+    &__cnt {
+        & h4 {
+            font-size: 26px;
+            line-height: 1;
+            font-weight: 500;
+            color: var(--heading-color);
+            font-family: var(--secondary-font);
+            margin-bottom: 8px;
+        }
+
+        & p {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 400;
+            font-family: var(--secondary-font2);
+        }
+    }
+}

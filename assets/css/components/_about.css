@@ -1,0 +1,19 @@
+.about_item {
+  position: relative; }
+  .about_item__thumb {
+    position: relative;
+    margin-bottom: 13px; }
+    .about_item__thumb img {
+      max-width: 100%;
+      width: auto; }
+  .about_item__cnt h4 {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--heading-color);
+    font-family: var(--secondary-font); }
+  .about_item__cnt p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: var(--secondary-font2); }
