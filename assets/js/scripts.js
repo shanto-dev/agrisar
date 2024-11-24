@@ -136,5 +136,36 @@
         }
     });
 
+    var overlay = $('.offcanvas-overlay'),
+    panel = $('.offcanvas-wrapper'),
+    panelclose = $('.offcanvas-close'),
+    navToggle = $('.offcanvas-trigger');
+
+    // Open the sidebar
+    navToggle.on('click', function (e) {
+        e.preventDefault();
+        $(this).removeClass('is-closed').addClass('is-opened');
+        panel.addClass('active');
+        overlay.addClass('show');
+    });
+
+    // Close the sidebar when the close button is clicked
+    panelclose.on('click', function () {
+        panel.removeClass('active');
+        overlay.removeClass('show');
+        navToggle.removeClass('is-opened').addClass('is-closed'); // Reset toggle button state
+    });
+
+    // Close the sidebar when clicking outside
+    $(document).on('click', function (event) {
+        if ((!$(event.target).closest(navToggle).length) && (!$(event.target).closest(panel).length)) {
+            panel.removeClass('active');
+            overlay.removeClass('show');
+            navToggle.removeClass('is-opened').addClass('is-closed'); // Reset toggle button state
+        }
+    });
+
+
+
 
 })(jQuery);

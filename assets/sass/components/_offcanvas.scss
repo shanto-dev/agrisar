@@ -1,0 +1,208 @@
+.offcanvas-trigger {
+    display: inline-block;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 34px;
+    transition: var(--transition-base);
+
+    & span {
+        display: block;
+        height: 3px;
+        background: var(--heading-color);
+        transition: var(--transition-base);
+
+        &:nth-child(2) {
+            margin: 5px 0;
+            margin-left: 5px;
+        }
+
+        &:nth-child(3) {
+            margin-left: 10px;
+        }
+    }
+
+    &:hover {
+        & span {
+            background: var(--primary-color);
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+//  Overlay 
+.offcanvas-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.offcanvas-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+// content 
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 1030;
+}
+
+.offcanvas-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-width: 400px;
+    width: 100%;
+    right: -100%;
+    left: auto;
+    transition: 0.5s cubic-bezier(0, 0.97, 0.07, -0.11);
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+.offcanvas-wrapper.active {
+    right: 0;
+}
+
+.offcanvas-wrapper .offcanvas-close {
+    cursor: pointer;
+    z-index: 999;
+    top: 30px;
+    right: 30px;
+}
+
+.offcanvas-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.offcanvas-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.offcanvas-wrapper .offcanvas-content {
+    padding: 60px 30px 60px 60px;
+    margin-top: 40px;
+}
+
+.widget-logo {
+    margin-bottom: 30px;
+    height: 67px;
+
+    & img {
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+.widget {
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.widget-title {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--secondary-font2);
+    text-transform: uppercase;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.widget_about {
+    & .about-content {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: var(--body-font);
+    }
+}
+
+.widget-social {
+    position: relative;
+    @include displayFlex(inline-flex, start, center, row);
+    gap: 15px;
+
+    & li {
+        & a {
+            position: relative;
+            @include displayFlex(flex, center, center, row);
+            width: 44px;
+            height: 44px;
+            font-size: 18px;
+            border-radius: 50%;
+            padding: 5px;
+            color: var(--white-color);
+            background: var(--primary-color);
+
+            &:hover {
+                background: #ff0046;
+            }
+        }
+    }
+}
+
+// Offcanvas Product Gallery 
+.widget_pd_gallery {
+    @include displayFlex(flex, start, center, row);
+    position: relative;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    & a {
+        position: relative;
+        display: inline-block;
+        flex: 0 auto;
+        width: 32.44%;
+
+        & img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.widget_info {
+    & .single_info {
+        position: relative;
+        margin-bottom: 4px;
+
+        &>span {
+            font-size: 12px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            font-family: var(--secondary-font2);
+            font-weight: 400;
+        }
+
+        & p {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 500;
+            font-family: var(--secondary-font2);
+            color: var(--heading-color);
+
+            & a {
+                color: inherit;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+        &:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+    }
+}

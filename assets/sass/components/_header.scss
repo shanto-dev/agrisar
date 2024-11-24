@@ -1,0 +1,44 @@
+.ar_header {
+    position: relative;
+
+    & .logo {
+        display: inline-block;
+
+        & img {
+            width: auto;
+            height: 70px;
+        }
+    }
+}
+
+.ar_navMenu {
+    text-align: right;
+
+    & ul {
+        @include displayFlex(inline-flex, end, center, row);
+        gap: 34px;
+
+        & li {
+            &.active {
+                & a {
+                    color: var(--primary-color);
+                }
+            }
+
+            & a {
+                position: relative;
+                display: inline-block;
+                padding: 40px 0;
+                font-size: 16px;
+                line-height: 1;
+                font-weight: 400;
+                color: var(--heading-color);
+                font-family: var(--secondary-font2);
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}

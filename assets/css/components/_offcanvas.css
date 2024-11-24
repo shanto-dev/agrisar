@@ -1,0 +1,11 @@
+.offcanvas-trigger {
+  display: inline-block;
+  width: 30px;
+  cursor: pointer; }
+  .offcanvas-trigger span {
+    display: block;
+    height: 3px;
+    background: var(--heading-color); }
+    .offcanvas-trigger span:nth-child(2) {
+      margin: 5px 0;
+      margin-left: 5px; }
