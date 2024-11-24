@@ -1,0 +1,7 @@
+.contact_form {
+  position: relative; }
+  .contact_form h2 {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--heading-color); }

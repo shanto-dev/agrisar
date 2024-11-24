@@ -1,0 +1,26 @@
+.ar_pageBanner {
+    padding: 200px 0 100px;
+    background: var(--white-background);
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    background-position: center;
+
+    & .ar_bradcrumb {
+        position: relative;
+
+        & li {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 600;
+            font-family: var(--secondary-font2);
+            color: var(--heading-color);
+            @include displayFlex(flex, start, center, row);
+            gap: 6px;
+        }
+
+        & a {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.contact_info_cnt {
+
+    & h3 {
+        font-size: 26px;
+        line-height: 26px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: var(--heading-color);
+    }
+
+    &>p {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 600;
+        color: var(--body-color);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+}
+
+.contact_info_item {
+    position: relative;
+    margin-bottom: 35px;
+
+    & h4 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: var(--body-color);
+        font-family: var(--secondary-font2);
+        margin-bottom: 8px;
+    }
+
+    & p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        font-family: var(--secondary-font2);
+        text-transform: capitalize;
+
+        & a {
+            color: inherit;
+            font-family: inherit;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+}
+
+.contact_form {
+    position: relative;
+
+    & h2 {
+        font-family: var(--secondary-font);
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: var(--heading-color);
+    }
+
+    & input {
+        border: 1px solid #e0e0e0;
+        height: 50px;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        font-family: var(--secondary-font2);
+        border-radius: 0;
+        outline: unset !important;
+        box-shadow: unset !important;
+    }
+
+    & textarea {
+        height: 200px;
+        padding: 20px;
+    }
+
+    & .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: unset;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        font-family: var(--secondary-font2);
+        border-radius: 0;
+    }
+
+    & button[type="submit"] {
+        border: unset;
+        outline: unset;
+    }
+}
