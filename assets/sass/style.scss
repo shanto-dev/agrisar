@@ -18,13 +18,15 @@ Version: 1.0.0
 @import 'components/header';
 @import 'components/footer';
 @import 'components/about';
-@import 'components/service';
+@import 'components/product';
 @import 'components/team';
 @import 'components/blog';
 @import 'components/offcanvas';
 @import 'components/banner';
 @import 'components/contact';
+@import 'components/testimonial';
 
 
 /****************************** page styles ******************************/
 @import 'pages/home';
+@import 'pages/about';

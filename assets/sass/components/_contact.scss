@@ -21,6 +21,20 @@
 .contact_info_item {
     position: relative;
     margin-bottom: 35px;
+    padding-left: 48px;
+
+    & .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        ;
+
+        & svg {
+            width: 35px;
+            height: 25px;
+            fill: var(--primary-color);
+        }
+    }
 
     & h4 {
         font-size: 14px;
@@ -80,6 +94,14 @@
         box-shadow: unset !important;
     }
 
+    & input[type='file'] {
+        border: 0;
+        padding: 0;
+        height: auto;
+        transition: border-color .25s ease-in-out;
+        cursor: pointer;
+    }
+
     & textarea {
         height: 200px;
         padding: 20px;
@@ -99,5 +121,12 @@
     & button[type="submit"] {
         border: unset;
         outline: unset;
+    }
+
+    & .fileUpload {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--heading-color);
+        font-family: var(--secondary-font);
     }
 }

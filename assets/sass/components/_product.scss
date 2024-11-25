@@ -1,5 +1,5 @@
 // Product Service 
-.ar_service_item {
+.ar_product_item {
     position: relative;
     padding: 50px 20px;
     background: var(--white-background);
@@ -7,6 +7,11 @@
 
     &__thumb {
         position: relative;
+        overflow: hidden;
+
+        & img {
+            transition: var(--transition-base);
+        }
     }
 
     &__cnt {
@@ -22,6 +27,14 @@
                 color: inherit;
                 font-size: inherit;
                 font-family: inherit;
+            }
+        }
+    }
+
+    &:hover {
+        & .ar_product_item__thumb {
+            & img {
+                transform: scale3d(1.1, 1.1, 1.1);
             }
         }
     }

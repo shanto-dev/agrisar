@@ -1,0 +1,19 @@
+.ar_about_cnt {
+    position: relative;
+
+    & p {
+        position: relative;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 600;
+        max-width: 886px;
+        margin: 0 auto;
+    }
+}
+
+.ar_testimonial_sec {
+    background-image: url(../images/testimonial/testi-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
