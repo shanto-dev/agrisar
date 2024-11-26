@@ -1,16 +1,12 @@
 .ar_pageBanner {
-    padding: 200px 0 100px;
+    padding: 150px 0 40px;
     background: var(--white-background);
     background-image: url(../images/banner.png);
     background-size: cover;
     background-position: center;
 
     @include screen-992 {
-        padding: 140px 0 50px;
-    }
-
-    @include screen-768 {
-        padding: 160px 0 60px;
+        padding: 130px 0 40px;
     }
 
     & .ar_bradcrumb {
