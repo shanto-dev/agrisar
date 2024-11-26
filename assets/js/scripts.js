@@ -1,75 +1,49 @@
-/*==================================
-* Strech Image 
-==================================*/
-// function zc_stretch() {
-//     var windowWidth = window.innerWidth;
-
-//     // Apply stretch logic only if the window width is greater than 1921px
-//     if (windowWidth < 1921) {
-//         document.querySelectorAll(".row .zc_stretch-element-inside-column").forEach(function (element) {
-//             console.log('hello');
-//             var row = element.closest(".row");
-//             var cols = element.closest('[class^="col-"]');
-//             var colsHeight = cols.offsetHeight;
-
-//             var rect = element.getBoundingClientRect();
-//             var rowRect = row.getBoundingClientRect();
-//             var colsRect = cols.getBoundingClientRect();
-
-//             var elementLeft = rect.left;
-//             var elementRight = rect.right;
-//             var rowLeft = rowRect.left + (parseFloat(getComputedStyle(row).paddingLeft) || 0);
-//             var rowRight = windowWidth - rowRect.right + (parseFloat(getComputedStyle(row).paddingRight) || 0);
-
-//             var colsLeft = colsRect.left;
-//             var colsRight = windowWidth - colsRect.right;
-
-//             var styles = {
-//                 "marginLeft": "0px",
-//                 "marginRight": "0px"
-//             };
-
-//             if (Math.round(rowLeft) === Math.round(colsLeft)) {
-//                 var marginLeft = parseFloat(getComputedStyle(element).marginLeft) || 0;
-//                 styles.marginLeft = (marginLeft - elementLeft) + "px";
-//             }
-
-//             if (Math.round(rowRight) === Math.round(colsRight)) {
-//                 var marginRight = parseFloat(getComputedStyle(element).marginRight) || 0;
-//                 styles.marginRight = (marginRight - (windowWidth - elementRight)) + "px";
-//             }
-
-//             Object.assign(element.style, styles);
-//         });
-//     } else {
-//         // Reset styles when width is 1920px or below
-//         document.querySelectorAll(".row .zc_stretch-element-inside-column").forEach(function (element) {
-//             element.style.marginLeft = "";
-//             element.style.marginRight = "-315px";
-//         });
-//     }
-// }
-// zc_stretch();
-// window.addEventListener('resize', zc_stretch);
-
-// /*==================================
-// * Sicky Headaer
-// ==================================*/
-// window.addEventListener("scroll", function () {
-//     const scrollBar = window.scrollY;
-//     const headers = document.querySelectorAll(".header-sticky");
-
-//     headers.forEach(header => {
-//         if (scrollBar > 150) {
-//             header.classList.add("sticky-on");
-//         } else {
-//             header.classList.remove("sticky-on");
-//         }
-//     });
-// });
-
 (function ($) {
     'use strict';
+
+    /*==================================
+    * Sicky Headaer
+    ==================================*/
+    if ($(".header-sticky").length > 0) {
+        var header_height = $(".header-sticky").height();
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() > 300) {
+                $(".header-sticky").addClass('fixedHeader animated slideInDown');
+            } else {
+                $(".header-sticky").removeClass('fixedHeader animated slideInDown');
+            }
+        });
+    }
+
+    /*============================================
+       07: Back to top button
+       ==============================================*/
+    var $backToTopBtn = $('.back-to-top');
+
+    if ($backToTopBtn.length) {
+        var scrollTrigger = 400, // px
+            backToTop = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $backToTopBtn.addClass('show');
+                } else {
+                    $backToTopBtn.removeClass('show');
+                }
+            };
+
+        backToTop();
+
+        $(window).on('scroll', function () {
+            backToTop();
+        });
+
+        $backToTopBtn.on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });
+    }
 
     // Funfact Countdown
     $(".countfact").appear();
@@ -137,9 +111,9 @@
     });
 
     var overlay = $('.offcanvas-overlay'),
-    panel = $('.offcanvas-wrapper'),
-    panelclose = $('.offcanvas-close'),
-    navToggle = $('.offcanvas-trigger');
+        panel = $('.offcanvas-wrapper'),
+        panelclose = $('.offcanvas-close'),
+        navToggle = $('.offcanvas-trigger');
 
     // Open the sidebar
     navToggle.on('click', function (e) {

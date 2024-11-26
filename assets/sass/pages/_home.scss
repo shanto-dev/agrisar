@@ -1,6 +1,86 @@
+// Hero Section 
+.hero_section {
+    padding-top: 200px;
+    min-height: 890px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_content {
+    @include displayFlex(flex, center, center, column);
+    gap: 4px;
+    & img{
+        height: 159px;
+    }
+
+    & h3 {
+        font-size: 1.79vh;
+        font-weight: bold;
+        text-align: start;
+        color: #fff;
+    }
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home-content {
+    position: relative;
+    padding-top: 150px;
+    color: #fff;
+    text-align: center;
+}
+
+
+// About Section 
+.ar_about_section {
+    background-image: url(../images/bg/about-bg.png);
+    background-size: auto;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+// Product Service Section 
+.ar_pdservice_section {
+    background-image: url(../images/bg/service-bg.png);
+    background-size: auto;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+// Testimonial Section 
+.ar_team_section {
+    background-image: url(../images/bg/testimonial-bg.png);
+    background-size: auto;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+// Bolog Section 
+.ar_blog_section {
+    background-image: url(../images/bg/blog-bg.png);
+    background-size: auto;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+
 
 // blog slider 
 .ar_blog_slider {
     padding: 25px;
     margin: -25px;
 }
+
+
