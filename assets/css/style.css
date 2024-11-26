@@ -231,6 +231,10 @@ h3 {
 .pb-70 {
   padding-bottom: 70px; }
 
+.py-70 {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+
 .py-60 {
   padding-top: 60px;
   padding-bottom: 60px; }
@@ -1739,3 +1743,41 @@ video {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+
+.terms_conditions_cnt {
+  position: relative; }
+  .terms_conditions_cnt h3 {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--heading-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .terms_conditions_cnt h3 {
+        font-size: 26px; } }
+  .terms_conditions_cnt p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #7a7a7a;
+    font-weight: 400;
+    margin-bottom: 16px; }
+
+.privacy_policy_cnt {
+  position: relative; }
+  .privacy_policy_cnt h3 {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--heading-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 16px; }
+    @media (max-width: 767px) {
+      .privacy_policy_cnt h3 {
+        font-size: 26px; } }
+  .privacy_policy_cnt p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #7a7a7a;
+    font-weight: 400;
+    margin-bottom: 16px; }

@@ -1,0 +1,24 @@
+.terms_conditions_cnt {
+    position: relative;
+
+    & h3 {
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--heading-color);
+        font-family: var(--secondary-font);
+        margin-bottom: 0;
+
+        @include screen-768 {
+            font-size: 26px;
+        }
+    }
+
+    & p {
+        font-size: 16px;
+        line-height: 26px;
+        color: #7a7a7a;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+}
