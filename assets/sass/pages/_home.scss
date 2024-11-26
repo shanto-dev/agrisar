@@ -4,12 +4,21 @@
     min-height: 890px;
     position: relative;
     overflow: hidden;
+
+    @include large-screen {
+        min-height: 780px
+    }
+
+    @include screen-992 {
+        min-height: 700px
+    }
 }
 
 .hero_content {
     @include displayFlex(flex, center, center, column);
     gap: 4px;
-    & img{
+
+    & img {
         height: 159px;
     }
 
@@ -55,6 +64,12 @@ video {
     background-position: top center;
     background-attachment: scroll;
     background-repeat: no-repeat;
+
+    & .ar_product_item {
+        & img {
+            width: 100%;
+        }
+    }
 }
 
 // Testimonial Section 
@@ -82,5 +97,3 @@ video {
     padding: 25px;
     margin: -25px;
 }
-
-

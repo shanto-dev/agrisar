@@ -5,6 +5,14 @@
     background-size: cover;
     background-position: center;
 
+    @include screen-992 {
+        padding: 140px 0 50px;
+    }
+
+    @include screen-768 {
+        padding: 160px 0 60px;
+    }
+
     & .ar_bradcrumb {
         position: relative;
 

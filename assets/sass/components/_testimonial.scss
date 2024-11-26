@@ -3,6 +3,10 @@
     @include displayFlex(flex, start, start, row);
     gap: 30px;
 
+    @include screen-768 {
+        flex-direction: column;
+    }
+
     &>* {
         flex: 0 auto;
     }
@@ -11,6 +15,10 @@
 .ar_testimonial_thumb {
     width: 37%;
     text-align: left;
+
+    @include screen-768 {
+        width: 100%;
+    }
 
     & img {
         max-width: 100%;
@@ -21,6 +29,11 @@
 .ar_testimonial_cnt {
     width: 63%;
     padding-left: 30px;
+
+    @include screen-768 {
+        padding-left: 0;
+        width: 100%;
+    }
 
     & .ar_quote_content {
         padding: 15px 20px;

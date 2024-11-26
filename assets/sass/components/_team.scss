@@ -28,12 +28,20 @@
             line-height: 1;
             font-weight: 600;
             color: var(--secondary-color);
+
+            @include large-screen {
+                font-size: 16px;
+            }
         }
 
         & p {
             font-size: 16px;
             line-height: 1.625;
             color: var(--secondary-color);
+
+            @include large-screen {
+                font-size: 13px;
+            }
         }
 
         & ul {

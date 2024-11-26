@@ -7,10 +7,12 @@
 .gradient_bg {
     background: var(--gradient-background);
 }
-.gray_bg{
+
+.gray_bg {
     background: var(--gray-background);
 }
-.white_bg{
+
+.white_bg {
     background: var(--white-background);
 }
 
@@ -45,6 +47,14 @@ blockquote {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 10px;
+
+    @include screen-992 {
+        font-size: 22px;
+    }
+
+    @include screen-768 {
+        font-size: 18px;
+    }
 }
 
 .ar_secHeading {
@@ -53,6 +63,14 @@ blockquote {
     font-weight: 600;
     color: var(--heading-color);
     margin-bottom: 38px;
+
+    @include screen-992 {
+        font-size: 36px;
+    }
+
+    @include screen-768 {
+        font-size: 31px;
+    }
 }
 
 
@@ -73,6 +91,9 @@ blockquote {
         line-height: 1;
         font-weight: 600;
         color: var(--white-color);
+        @include large-screen{
+            font-size: 21px;
+        }
     }
 }
 

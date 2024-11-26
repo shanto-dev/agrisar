@@ -84,11 +84,13 @@ h3 {
     font-weight: 400 !important;
 }
 
-.container,
-.container-sm,
-.container-lg,
-.container-xl,
-.container-xxl {
-    max-width: 1124px;
-    width: 100%;
+@media(min-width:1200px) {
+    .container,
+    .container-sm,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
+        max-width: 1124px;
+        width: 100%;
+    }
 }

@@ -7,6 +7,25 @@
     background-repeat: no-repeat;
 }
 
+.ar_footer_top {
+    .row {
+        & [class^="col-"] {
+
+            &:nth-child(2) {
+                @media(max-width: 1199px) and (min-width: 992px) {
+                    width: 27%;
+                }
+            }
+
+            &:nth-child(4) {
+                @media(max-width: 1199px) and (min-width: 992px) {
+                    width: 31.333333%;
+                }
+            }
+        }
+    }
+}
+
 .widget_title {
     font-size: 18px;
     font-weight: 500;
@@ -41,8 +60,12 @@
     & h4 {
         font-size: 16px;
         line-height: 24px;
-        font-size: 500;
+        font-weight: 500;
         font-family: var(--secondary-font);
+
+        @include large-screen {
+            font-size: 15px;
+        }
 
         & a {
             color: inherit;

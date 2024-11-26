@@ -2,7 +2,7 @@
     'use strict';
 
     /*==================================
-    * Sicky Headaer
+    // Sicky Headaer
     ==================================*/
     if ($(".header-sticky").length > 0) {
         var header_height = $(".header-sticky").height();
@@ -15,9 +15,20 @@
         });
     }
 
+    /*==================================
+    // mobile Menu 
+    ==================================*/
+    $(window).on("load", function (e) {
+        $('.mobile_hamburger').on('click', function(e){
+           e.preventDefault();
+           $('.ar_navMenu').stop(true, true).slideToggle();
+           $(this).toggleClass('active');
+        });
+     });
+
     /*============================================
-       07: Back to top button
-       ==============================================*/
+    // Back to top button
+    ==============================================*/
     var $backToTopBtn = $('.back-to-top');
 
     if ($backToTopBtn.length) {
@@ -45,7 +56,9 @@
         });
     }
 
+    /*==================================
     // Funfact Countdown
+    ==================================*/
     $(".countfact").appear();
     $(document.body).on("appear", ".countfact", function (e, $affected) {
         $affected.each(function () {
@@ -100,7 +113,7 @@
                 spaceBetween: 20
             },
             768: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 24
             },
             992: {
