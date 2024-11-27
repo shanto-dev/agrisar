@@ -1,0 +1,197 @@
+.sidebar {
+    position: relative;
+
+    & .widget_title {
+        margin-bottom: 18px;
+    }
+}
+
+.search_widget {
+    & form {
+        position: relative;
+    }
+
+    & input {
+        width: 100%;
+        height: auto;
+        padding: 10px 40px 10px 12px;
+        border-radius: 6px;
+        background: #f8f9fa;
+        border: unset;
+        outline: unset;
+        box-shadow: unset;
+        font-size: 18px;
+        line-height: 28px;
+        font-family: var(--secondary-font2);
+    }
+
+    & button[type="submit"] {
+        padding: 8px 12px;
+        border-radius: 0 6px 6px 0;
+        border: unset;
+        outline: unset;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 18px;
+        line-height: 28px;
+        font-family: var(--secondary-font2);
+        font-weight: 600;
+    }
+}
+
+.resent_post_widget {
+    position: relative;
+
+    & li {
+        position: relative;
+        padding-left: 95px;
+        min-height: 80px;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & .post_thumb {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .post_cnt {
+        @include displayFlex(flex, start, start, column);
+        gap: 2px;
+
+        & .post_date {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--body-color);
+            font-family: var(--secondary-font2);
+        }
+
+        & h3 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+            font-family: var(--secondary-font2);
+            color: var(--heading-color);
+
+            & a {
+                color: inherit;
+                font-size: inherit;
+                display: inline-block;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+// Cagegory widget 
+.post_cagegory_widget {
+    position: relative;
+    @include displayFlex(inline-flex, start, start, row);
+    gap: 20px;
+    flex-wrap: wrap;
+
+    & li a {
+        padding: 12px 22px;
+        border-radius: 50px;
+        box-shadow: var(--gray-box-shadow2);
+        font-size: 16px;
+        font-weight: 600;
+        font-family: var(--secondary-font2);
+        color: var(--heading-color);
+
+        &:hover {
+            background: var(--primary-color);
+            color: var(--white-color);
+        }
+    }
+}
+
+// Social Widget 
+.social_widget {
+    position: relative;
+    @include displayFlex(inline-flex, start, start, row);
+    gap: 15px;
+
+    & li {
+        & a {
+            position: relative;
+            @include displayFlex(flex, center, center, row);
+            width: 44px;
+            height: 44px;
+            font-size: 18px;
+            border-radius: 50%;
+            padding: 5px;
+            color: var(--white-color);
+            background: var(--primary-color);
+
+            &:hover {
+                background: #ff0046;
+            }
+        }
+    }
+}
+
+
+.addbanner_Widget {
+    position: relative;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 40px;
+    text-align: center;
+    @include displayFlex(flex, center, center, column);
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 0, 70, 0.6);
+        z-index: -1;
+    }
+
+    & h3 {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 600;
+        color: var(--white-color);
+        font-family: var(--secondary-font2);
+
+        & a {
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+
+            &:hover {
+                color: var(--heading-color);
+            }
+        }
+    }
+
+    & .ar_primary_btn {
+        background: var(--white-color);
+        font-weight: 600;
+    }
+}
